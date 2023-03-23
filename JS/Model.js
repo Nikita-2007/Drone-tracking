@@ -40,4 +40,10 @@ class Model {
         ctx.quadraticCurveTo(560, -200, 1233, 210);
         ctx.stroke();
     }
+	update() {
+		this.size={
+            width: window.innerWidth,
+            height: window.innerHeight
+        };
+	}
 }
