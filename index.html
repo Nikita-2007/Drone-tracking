@@ -7,40 +7,43 @@
     <meta name="discription" content="DroneTracking">
     <title>DroneTracking</title>
     <link rel="icon" href="Images/favicon.png" type="image/png">
+    <link rel="stylesheet" href="CSS/normalize.css">
     <link rel="stylesheet" href="CSS/style.css">
 </head>
 <body>   
-    <div class="bar">
-        <div id='buttons'>
-            <button id='play'>
-                кнопка 1
-            </button>	
+    <div class="row bar">
+        <button>
+            кнопка 1
+        </button>
+        <button>
+            abc
+        </button>
+    </div>
+    <div class="row bar">
+        <button>
+            кнопка 2
+        </button>
+        <button>
+            abc
+        </button>
+    </div>
+
+    <div class="row">
+        <div class="radar" id="radar">
+            <canvas id="canvas"></canvas>
         </div>
-    <div class="bar">
-		
+        <div class="photo">
+
+        </div>
     </div>
-    <div class="all">
-		<div>
-		    <div class="radar">
-                <canvas width="1125" height="855"></canvas>
-			</div>
-			
-			<div class="radarbar">
-				
-			</div>
-		</div>
-		<div>
-		    <div class="photo">
-				
-			</div>
-			
-			<div class="photobar">
-				
-			</div>
-		</div>
-    </div>
-    <div class="bar">
-		
+
+    <div class="row bar">
+        <button>
+            кнопка 3
+        </button>
+        <button>
+            abc
+        </button>
     </div>
     <script src='JS/script.js' type='application/javascript'></script>
 </body>

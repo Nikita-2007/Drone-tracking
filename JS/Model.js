@@ -1,9 +1,9 @@
 class Model {
     //Базовая модель
     constructor() {
-        this.size={
-            width: window.innerWidth,
-            height: window.innerHeight
+        this.size = {
+            width: document.getElementById('radar').offsetWidth,
+            height: document.getElementById('radar').offsetHeight
         };
         this.init();
     }

@@ -1,5 +1,4 @@
 //DroneTracking
-
 var model, view, control;
 
 let listClass = [

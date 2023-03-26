@@ -3,53 +3,27 @@ html, body {
     background-color: darkslategray;
     width: 100%;
     height: 100%;
-    margin: 0;
-    padding: 0;
     overflow: hidden;
+    line-height: 0;
+}
+
+.row {
+    display: inline-block;
+    width: 100%;
 }
 
 .bar {
-    position: relative;
-    width: 100%;
-    height: 2em;
-    background-color: white;
-    outline: 2px solid black;
-    outline-offset: -2px;
-}
-.radar {
-    position: relative;
-    width: 60%;
-    height: 90%;/*ДОДЕЛАТЬ*/
-    background-color: black;
-    outline: 2px solid blue;
-    outline-offset: -2px;
-}
-.radarbar {
-    position: relative;
-    width: 60%;
-    height: 2em;
-    background-color: darkred;
-    outline: 2px solid black;
-    outline-offset: -2px;
-}
-.photo {
-    right: 0;
-    background-color: yellow;
-    outline: 2px solid black;
-    outline-offset: -2px;
+    height: 3vh;
 }
 
-.photobar {
-    position: relative;
-    width: 40%;
-    height: 2em;
-    margin-left: auto;
-    margin-right: 0em;
-    background-color: green;
-    outline: 2px solid black;
-    outline-offset: -2px;
+.radar {
+    float: left;
+    width: 60%;
+    height: 91vh;
 }
-.all {
-    outline: 2px solid red;
-    outline-offset: -2px;
+
+.photo {
+    float: left;
+    width: 40%;
+    min-height: 91vh;
 }
