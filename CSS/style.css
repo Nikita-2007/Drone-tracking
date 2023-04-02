@@ -1,6 +1,6 @@
 
 html, body {
-    background-color: darkslategray;
+    background-color: white;
     width: 100%;
     height: 100%;
     overflow: hidden;
@@ -14,16 +14,26 @@ html, body {
 
 .bar {
     height: 3vh;
+    background-color: red;
 }
 
 .radar {
     float: left;
     width: 60%;
-    height: 91vh;
+    height: 89vh;
+    background-color: black;
 }
-
 .photo {
     float: left;
     width: 40%;
-    min-height: 91vh;
+    height: 89vh;;
+    background-color: blue;
+}
+.tabble {
+    background-color: green;
+    height: 89vh;;
+    width: 40%;
+}
+#canvas {
+    pass
 }

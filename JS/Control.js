@@ -1,6 +1,6 @@
 class Control {
     constructor() {
-        this.game=true;
+        /*
         this.focus=false;
         this.info=false;
         
@@ -10,15 +10,14 @@ class Control {
         this.btnPlay.addEventListener('click', this.play.bind(this));
         this.btnClear.addEventListener('click', this.clear.bind(this));
         this.btnSave.addEventListener('click', this.save.bind(this));
-        
+        */
         onclick=(e) => this.onClick(e);
         onkeydown=(e) => this.onKeyDown(e);
-        setInterval(() => this.update(), 1000/FPS);
+        setInterval(() => this.update(), 100);
     }
 
     update() {
-        if (this.game)
-            model.update();
+        model.update();
         view.draw();
     }
 
