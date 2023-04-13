@@ -10,7 +10,9 @@ class Control {
         this.btnPlay.addEventListener('click', this.play.bind(this));
         this.btnClear.addEventListener('click', this.clear.bind(this));
         this.btnSave.addEventListener('click', this.save.bind(this));
-        */
+       */
+        this.labWork = document.getElementById('work');
+        this.labWork.textContent = "Не работает";
         onclick=(e) => this.onClick(e);
         onkeydown=(e) => this.onKeyDown(e);
         setInterval(() => this.update(), 100);

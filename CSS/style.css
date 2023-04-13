@@ -1,4 +1,3 @@
-
 html, body {
     background-color: white;
     width: 100%;
@@ -23,16 +22,19 @@ html, body {
     height: 89vh;
     background-color: black;
 }
-.photo {
+
+.right {
     float: left;
     width: 40%;
-    height: 89vh;;
+    height: 89vh;
+}
+.photo {
+    height: 54vh;
     background-color: blue;
 }
-.tabble {
+.table {
+    height: 35vh;
     background-color: green;
-    height: 89vh;;
-    width: 40%;
 }
 #canvas {
     pass
