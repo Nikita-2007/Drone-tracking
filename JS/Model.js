@@ -1,12 +1,17 @@
+//DroneTracking
+
 class Model {
-    //Базовая модель
     constructor() {
         this.init();
+        this.listObject = [];
     }
+
     init() {
         
     }
-	update() {
 
+	update() {
+        for (let obj of this.listObject)
+            obj.update();
 	}
 }

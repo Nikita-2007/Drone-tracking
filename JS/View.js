@@ -14,17 +14,12 @@ class View {
         ctx.beginPath();
         ctx.strokeStyle = "darkblue";
         //Радар
-        let x160 = this.size.width/12;
-        let x213 = this.size.width/9;
-        let x1300 = this.size.width/1.47;
-        let x700 = this.size.width/2.74;
-        let x1050 = this.size.width/1.828;
-        for (var x = -x160; x < x1300; x += x213) {
+        for (var x = -160; x < 1300; x += 213) {
             ctx.moveTo(x, 0);
-            ctx.lineTo(x700-(x/4), x1050);
+            ctx.lineTo(700-(x/4), 1050);
         }
         for (var i = 1; i < 15; i += 1) {
-            ctx.moveTo(i*52-x160, i*60);
+            ctx.moveTo(i*52-160, i*60);
             ctx.quadraticCurveTo(560, i*60-(80/i*10), 1115-i*52+170, i*60);
         }
         ctx.stroke();
@@ -32,7 +27,7 @@ class View {
         ctx.beginPath();
         ctx.lineWidth = 2;
         ctx.strokeStyle = "red";
-        ctx.moveTo(-x160, 0);
+        ctx.moveTo(-160, 0);
         ctx.lineTo(552, 830);
         ctx.moveTo(1275, 0);
         ctx.lineTo(570, 830);
@@ -41,6 +36,11 @@ class View {
         ctx.moveTo(0, 150);
         ctx.quadraticCurveTo(560, -200, 1233, 210);
         ctx.stroke();
+        
+        for (let obj of model.listObject) {
+            obj.drawRadar(ctx);
+            obj.drawCamera(ctx);
+        }
     }
     
     onResize() {

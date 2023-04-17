@@ -40,40 +40,59 @@
         </button>
     </div>
     <div class="row bar">
-        <button>
-            Излучение
+        <label>
+            Создать:
+        </label>
+        <button id="createQuadrocopter">
+            Квадрокоптер
+        </button>
+        <button id="createScout">
+            Разветчик
+        </button>
+        <button id="createAttacking">
+            Атакующий
+        </button>
+        <button id="createBomber">
+            Бомбардировщик
+        </button>
+        <button id="createBird">
+            Птица
         </button>
         <label>
-            Излучение
+            Режим:
         </label>
+        <input type="radio" id="person" name="mode"> Пользовательский
+        <input type="radio" id="auto" name="mode"> Auto
+        <input type="radio" id="off" name="mode"> Выкл
+        <button id="modeAppy">
+            Применить
+        </button>
+        <input type="checkbox" id="radarOff">
         <label>
-            ID: 88
+            Радар выведен из строя
         </label>
-        <button>
-            Выбрать
-        </button>
-        <button>
-            Принять
-        </button>
+        <input type="checkbox" id="cameraOff">
         <label>
-            ДОДЕЛАТЬ
+            Камера выведена из строя
         </label>
-        <button>
-            СТОП
+        <button id="breakAppy">
+            Применить
         </button>
-        
+        <button id="reset">
+            Сбросить все настройи по умолчанию
+        </button>
     </div>
 
     <div class="row">
-        <div class="radar" id="radar">
-            <div><canvas id="canvas"></canvas></div>
+        <div class="left" id="radar">
+            <div class = radar><canvas id="canvas"></canvas></div>
             <div class="bar">
 
             </div>
         </div>
-        <div class="left">
+        <div class="right">
             <div class="photo">
-                
+                <img src="images/Photo.png">
             </div>
             <div class="table">
                 

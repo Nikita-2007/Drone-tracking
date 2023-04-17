@@ -2,6 +2,12 @@
 var model, view, control;
 
 let listClass = [
+    'Fly/Bird',
+    'Fly/Scout',
+    'Fly/Attacking',
+    'Fly/Quadrocopter',
+    'Fly/Bomber',
+    'Fly/Rocket',
     'Model',
     'View',
     'Control'

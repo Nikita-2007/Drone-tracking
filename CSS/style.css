@@ -10,32 +10,31 @@ html, body {
     display: inline-block;
     width: 100%;
 }
-
 .bar {
     height: 3vh;
-    background-color: red;
 }
-
-.radar {
+.left {
     float: left;
     width: 60%;
-    height: 89vh;
+    height: 91vh;
+}
+.radar {
+    height: 88vh;
     background-color: black;
 }
 
 .right {
     float: left;
     width: 40%;
-    height: 89vh;
+    height: 91vh;
 }
 .photo {
-    height: 54vh;
-    background-color: blue;
+    height: 55vh;
 }
 .table {
-    height: 35vh;
-    background-color: green;
+    height: 36vh;
 }
+
 #canvas {
-    pass
+    max-width: 100%z;
 }
