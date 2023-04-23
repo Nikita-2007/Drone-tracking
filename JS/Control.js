@@ -44,8 +44,10 @@ class Control {
     
     newObject(t) {
         let obj;
-        if (t == 'scout')
+        if (t == 'scout'){
             obj = new Scout();
+            console.log(123);
+        }
         else if (t == 'attacking')
             obj = new Attacking();
         else if (t == 'bird')

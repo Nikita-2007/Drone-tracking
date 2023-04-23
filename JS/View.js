@@ -41,7 +41,8 @@ class View {
         ctx.stroke();
         
         for (let obj of model.listObject) {
-            obj.drawRadar(ctx);
+            if (model.inRadar(obj))
+                obj.drawRadar(ctx);
             obj.drawCamera(ctx);
         }
     }

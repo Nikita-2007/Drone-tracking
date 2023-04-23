@@ -3,21 +3,23 @@
 class Scout {
     constructor() {
         this.type = "scout";
-        this.pos = {
-            x: 0,
-            y: 0,
-            z: 0
-        };
+        this.pos = model.rndSpawn();
         this.speed = 6;
         this.size = 2;
         this.color = "orange";
+        this.target = {
+            x: window.innerWidth/2,
+            y: window.innerHeight/2
+        };
     }
 
     update() {
-        this.pos.x += 10;
-        this.pos.y += 10;
+        this.pos = model.step(this.pos, this.target, this.speed)
+        if (model.delta(this.pos, this.target) <= this.speed) {
+            this.target = model.rndPos();
+        }
     }
-    
+
     drawRadar(ctx) {
         ctx.beginPath();
         ctx.strokeStyle = this.color;
