@@ -46,7 +46,7 @@ class View {
                 obj.drawRadar(ctx);
             obj.drawCamera(ctx);
         }
-        
+
     }
     
     onResize() {
