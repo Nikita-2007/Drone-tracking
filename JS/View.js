@@ -13,6 +13,7 @@ class View {
         let ctx = this.ctx;
         //Радар
         ctx.beginPath();
+        ctx.fillStyle = 'black';
         ctx.fillRect(0, 0, this.size.width, this.size.height)
         ctx.stroke();
         ctx.beginPath();
@@ -45,6 +46,7 @@ class View {
                 obj.drawRadar(ctx);
             obj.drawCamera(ctx);
         }
+        
     }
     
     onResize() {

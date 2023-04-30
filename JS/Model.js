@@ -17,8 +17,8 @@ class Model {
 
     step(pos, target, speed) {
         let angle = Math.atan2(pos.y - target.y, pos.x - target.x) - Math.PI;
-        pos.x += speed * Math.cos(angle);
-        pos.y += speed * Math.sin(angle);
+        pos.x += speed/2 * Math.cos(angle);
+        pos.y += speed/2 * Math.sin(angle);
 
         return pos;
     }
@@ -31,6 +31,7 @@ class Model {
                 t = false;
         return t;
     }
+
     rndSpawn() {
         let temp = this.rndPos();
         let pos;
