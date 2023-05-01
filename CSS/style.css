@@ -18,7 +18,7 @@ html, body {
     width: 60%;
     height: 91vh;
 }
-.radar {
+#radar {
     height: 88vh;
     background-color: black;
 }
@@ -28,13 +28,17 @@ html, body {
     width: 40%;
     height: 91vh;
 }
-.photo {
+#photo {
     height: 55vh;
 }
-.table {
+#table {
     height: 36vh;
 }
 
 #canvas {
     max-width: 100%z;
+}
+
+.drone {
+    color: red;
 }

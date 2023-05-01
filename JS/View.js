@@ -4,9 +4,21 @@ class View {
             width: document.getElementById('radar').offsetWidth,
             height: document.getElementById('radar').offsetHeight
         };
+
         this.canvas=document.getElementById('canvas');
+        this.photo=document.getElementById('photo');
         this.onResize();
         window.addEventListener('resize', this.onResize);
+
+        //Временно
+
+        this.url = 'Images/drone1.png';
+        this.image = new Image();
+        this.image.src = this.url;
+        document.getElementById('photo').appendChild(this.image);
+        /*this.label = document.createElement('IMG');
+        this.label.innerHTML;
+        this.photol.appendChild(this.label);*/
     }
     
     draw() {
@@ -18,6 +30,8 @@ class View {
         ctx.stroke();
         ctx.beginPath();
         ctx.strokeStyle = "darkblue";
+
+        //Сетка
         for (var i = 0; i < 8; i += 1) {
             ctx.moveTo(i*160, 0);
             ctx.lineTo(552+i*2, 825);
@@ -28,6 +42,7 @@ class View {
         }
         ctx.stroke();
 
+        //Рамка радара
         ctx.beginPath();
         ctx.lineWidth = 2;
         ctx.strokeStyle = "red";
@@ -40,7 +55,8 @@ class View {
         ctx.moveTo(0, 185);
         ctx.quadraticCurveTo(565, -100, 1130, 185);
         ctx.stroke();
-        
+
+        //Отрисовка дронов
         for (let obj of model.listObject) {
             if (model.inRadar(obj))
                 obj.drawRadar(ctx);

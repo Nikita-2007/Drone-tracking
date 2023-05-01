@@ -16,7 +16,6 @@ class Control {
         this.btnbreakAppy = document.getElementById('breakAppy');
         this.btnReset = document.getElementById('reset');
 
-
         this.btnCreateScout.addEventListener('click', this.newObject('scout'));
         this.btnCreateAttacking.addEventListener('click', this.newObject('attacking'));
         this.btnCreateBird.addEventListener('click', this.newObject('bird'));
@@ -37,6 +36,7 @@ class Control {
         setInterval(() => this.update(), 100);
     }
 
+
     update() {
         model.update();
         view.draw();
@@ -44,10 +44,8 @@ class Control {
     
     newObject(t) {
         let obj;
-        if (t == 'scout'){
+        if (t == 'scout')
             obj = new Scout();
-            console.log(123);
-        }
         else if (t == 'attacking')
             obj = new Attacking();
         else if (t == 'bird')
@@ -56,7 +54,6 @@ class Control {
             obj = new Quadrocopter();
         else if (t == 'bomber')
             obj = new Bomber();
-        
         model.listObject.push(obj);
     }
 }

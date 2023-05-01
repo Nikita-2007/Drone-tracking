@@ -3,7 +3,10 @@
 class Scout {
     constructor() {
         this.type = "scout";
-        this.pos = model.rndSpawn();
+        this.pos = {
+            x:0,
+            y:0
+        };//model.rndSpawn();
         this.speed = 6;
         this.size = 2;
         this.color = "orange";
@@ -39,7 +42,12 @@ class Scout {
     }
 
     drawCamera(ctx) {
-        
+        ctx.beginPath();
+        ctx.arc(this.pos.y-this.size/2+1100,this.pos.x-this.size/2,this.size,0,Math.PI*2,false);
+        ctx.fillStyle = 'red';
+        ctx.fill();
+        ctx.strokeStyle = 'red';
+        ctx.stroke();
     }
 
     destroy() {
