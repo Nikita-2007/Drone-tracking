@@ -35,28 +35,17 @@ class Model {
     rndSpawn() {
         let temp = this.rndPos();
         let pos;
-        if (Math.random() >= 0.5) {
-            pos = {
-                x: temp.x,
-                y: 0
-            }; 
-        }
+        if (Math.random() >= 0.5)
+            pos={x: temp.x, y: 0}; 
         else {
-            if (Math.random() >= 0.5) {
-                pos = {
-                    x: 0,
-                    y: temp.y/2
-                };
-            }
-            else {
-                pos = {
-                    x: view.size.width,
-                    y: temp.y/2
-                };
-            }
+            if (Math.random() >= 0.5)
+                pos = {x: 0, y: temp.y/2};
+            else
+                pos = {x: view.size.width, y: temp.y/2};
         }
         return pos;
     }
+
     rndPos() {
         let pos = {
             x: Math.random() * view.size.width,

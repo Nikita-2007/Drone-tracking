@@ -16,9 +16,6 @@ class View {
         this.image = new Image();
         this.image.src = this.url;
         document.getElementById('photo').appendChild(this.image);
-        /*this.label = document.createElement('IMG');
-        this.label.innerHTML;
-        this.photol.appendChild(this.label);*/
     }
     
     draw() {

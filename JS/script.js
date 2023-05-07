@@ -10,6 +10,7 @@ let listClass = [
     'Fly/Rocket',
     'Model',
     'View',
+    'DroneTracking',
     'Control'
 ];
 

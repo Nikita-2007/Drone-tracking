@@ -1,5 +1,6 @@
 class Control {
     constructor() {
+        /*
         this.btnCreateScout = document.getElementById('createScout');
         this.btnCreateAttacking = document.getElementById('createAttacking');
         this.btnCreateBird = document.getElementById('createBird');
@@ -21,6 +22,7 @@ class Control {
         this.btnCreateBird.addEventListener('click', this.newObject('bird'));
         this.btnCreateQuadrocopter.addEventListener('click', this.newObject('quadrocopter'));
         this.btnCreateBomber.addEventListener('click', this.newObject('bomber'));
+        */
 
         //Не сделаанные
         /*this.labWork.addEventListener('click', this.play.bind(this));
@@ -41,7 +43,7 @@ class Control {
         model.update();
         view.draw();
     }
-    
+
     newObject(t) {
         let obj;
         if (t == 'scout')
