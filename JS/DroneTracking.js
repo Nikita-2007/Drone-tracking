@@ -8,8 +8,4 @@ class DroneTracking {
     update() {
 
     }
-    
-    tracking() {
-
-    }
 }

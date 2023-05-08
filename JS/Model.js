@@ -23,9 +23,9 @@ class Model {
         return pos;
     }
 
-    inRadar(obj) {
+    inRadar(pos) {
         let t = false;
-            if (obj.pos.y <= 1.17 * obj.pos.x + 185 && obj.pos.y <= -1.15*obj.pos.x+1486.52)
+            if (pos.y <= 1.17 * pos.x + 185 && pos.y <= -1.15*pos.x+1486.52)
                 t = true;
             else
                 t = false;
@@ -36,22 +36,38 @@ class Model {
         let temp = this.rndPos();
         let pos;
         if (Math.random() >= 0.5)
-            pos={x: temp.x, y: 0}; 
+            pos = {
+                x: temp.x,
+                y: 0
+            }; 
         else {
             if (Math.random() >= 0.5)
-                pos = {x: 0, y: temp.y/2};
+                pos = {
+                    x: 0,
+                    y: temp.y/2
+                };
             else
-                pos = {x: view.size.width, y: temp.y/2};
+                pos = {
+                    x: view.size.width,
+                    y: temp.y/2
+                };
         }
         return pos;
     }
 
+
     rndPos() {
+        
         let pos = {
-            x: Math.random() * view.size.width,
-            y: Math.random() * view.size.height
-        }
+            x: Math.round(Math.random() * view.size.width),
+            y: Math.round(Math.random() * view.size.height)
+        };
         return pos;
+    }
+
+    newRocket(tar) {
+        let obj = new Rocket(tar);
+        this.listObject.push(obj);
     }
 
     delta(pos, target) {

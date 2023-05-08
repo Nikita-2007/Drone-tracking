@@ -3,9 +3,9 @@
 class Bird {
     constructor() {
         this.type = "bird";
+        this.color = "gray";
         this.speed = 3;
         this.size = 1;
-        this.color = "gray";
         this.pos = model.rndSpawn();
         this.target = model.rndPos();
     }

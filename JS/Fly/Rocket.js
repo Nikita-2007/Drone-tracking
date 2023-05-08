@@ -1,23 +1,42 @@
 //DroneTracking
 
 class Rocket {
-    constructor() {
+    constructor(obj) {
+        this.obj = obj;
         this.type = "rocket";
-        this.pos = {
-            x: 0,
-            y: 0,
-        };
-        this.speed = 12;
+        this.color = "lime";
+        this.speed = 0;
         this.size = 1;
-        this.color = "green";
+        this.pos = {
+            x: 500,
+            y: 600,
+        };
+        this.target = {
+            x: this.obj.pos.x,
+            y: this.obj.pos.y
+        };
     }
 
     update() {
-
+        this.target = {
+            x: this.obj.pos.x,
+            y: this.obj.pos.y
+        };
+        this.pos = model.step(this.pos, this.target, this.speed)
+        if (this.speed <= 20)
+            this.speed += 0.5;
+        if (model.delta(this.pos, this.target) <= this.speed/4) {
+            this.destroy();
+        }
     }
     
-    drawRadar() {
-
+    drawRadar(ctx) {
+        ctx.beginPath();
+        ctx.arc(this.pos.x-this.size/2,this.pos.y-this.size/2,this.size,0,Math.PI*2,false);
+        ctx.fillStyle = this.color;
+        ctx.fill();
+        ctx.strokeStyle = this.color;
+        ctx.stroke();
     }
 
     drawCamera() {
@@ -25,6 +44,7 @@ class Rocket {
     }
 
     destroy() {
-
+        model.listObject.splice(model.listObject.indexOf(this.obj), 1);
+        model.listObject.splice(model.listObject.indexOf(this), 1);
     }
 }

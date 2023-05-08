@@ -8,9 +8,9 @@ let listClass = [
     'Fly/Quadrocopter',
     'Fly/Bomber',
     'Fly/Rocket',
+    'DroneTracking',
     'Model',
     'View',
-    'DroneTracking',
     'Control'
 ];
 

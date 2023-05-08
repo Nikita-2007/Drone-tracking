@@ -55,11 +55,10 @@ class View {
 
         //Отрисовка дронов
         for (let obj of model.listObject) {
-            if (model.inRadar(obj))
+            if (model.inRadar(obj.pos))
                 obj.drawRadar(ctx);
             obj.drawCamera(ctx);
         }
-
     }
     
     onResize() {
