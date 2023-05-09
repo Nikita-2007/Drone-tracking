@@ -4,6 +4,7 @@ class Model {
     constructor() {
         this.init();
         this.listObject = [];
+        this.auto = new Auto();
     }
 
     init() {
@@ -13,6 +14,7 @@ class Model {
 	update() {
         for (let obj of this.listObject)
             obj.update();
+        this.auto.update();
 	}
 
     step(pos, target, speed) {

@@ -8,7 +8,7 @@ let listClass = [
     'Fly/Quadrocopter',
     'Fly/Bomber',
     'Fly/Rocket',
-    'DroneTracking',
+    'Auto',
     'Model',
     'View',
     'Control'

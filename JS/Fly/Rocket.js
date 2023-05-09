@@ -8,8 +8,8 @@ class Rocket {
         this.speed = 0;
         this.size = 1;
         this.pos = {
-            x: 500,
-            y: 600,
+            x: 560,
+            y: 820,
         };
         this.target = {
             x: this.obj.pos.x,
