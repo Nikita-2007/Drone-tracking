@@ -5,6 +5,7 @@ class Model {
         this.init();
         this.listObject = [];
         this.auto = new Auto();
+        this.autoOn = false;
     }
 
     init() {
@@ -14,7 +15,8 @@ class Model {
 	update() {
         for (let obj of this.listObject)
             obj.update();
-        this.auto.update();
+        if (this.autoOn == true)
+            this.auto.update();
 	}
 
     step(pos, target, speed) {

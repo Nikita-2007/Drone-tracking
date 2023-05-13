@@ -61,12 +61,9 @@
         <label>
             Режим:
         </label>
-        <input type="radio" id="person" name="mode"> Пользовательский
-        <input type="radio" id="auto" name="mode"> Auto
-        <input type="radio" id="off" name="mode"> Выкл
-        <button id="modeAppy">
-            Применить
-        </button>
+        <input type="radio" id="person" name="mode" onclick="model.autoOn=false;"> Пользовательский
+        <input type="radio" id="auto" name="mode" onclick="model.autoOn=true;"> Auto
+        <input type="radio" id="off" name="mode" onclick="model.autoOn=false;"> Выкл
         <input type="checkbox" id="radarOff">
         <label>
             Радар выведен из строя
