@@ -21,8 +21,8 @@ class Model {
 
     step(pos, target, speed) {
         let angle = Math.atan2(pos.y - target.y, pos.x - target.x) - Math.PI;
-        pos.x += speed/2 * Math.cos(angle);
-        pos.y += speed/2 * Math.sin(angle);
+        pos.x += Math.round(speed/2 * Math.cos(angle));
+        pos.y += Math.round(speed/2 * Math.sin(angle));
 
         return pos;
     }
@@ -37,7 +37,10 @@ class Model {
     }
 
     rndSpawn() {
-        let temp = this.rndPos();
+        let temp =  {
+            x: Math.round(Math.random() * view.size.width),
+            y: Math.round(Math.random() * view.size.height)
+        };;
         let pos;
         if (Math.random() >= 0.5)
             pos = {
@@ -60,13 +63,12 @@ class Model {
     }
 
 
-    rndPos() {
-        
-        let pos = {
-            x: Math.round(Math.random() * view.size.width),
-            y: Math.round(Math.random() * view.size.height)
+    rndPos(pos) {
+        let t = {
+            x: pos.x + Math.round(Math.random() * 200-100),
+            y: pos.y + Math.round(Math.random() * 200-75)
         };
-        return pos;
+        return t;
     }
 
     newRocket(tar) {

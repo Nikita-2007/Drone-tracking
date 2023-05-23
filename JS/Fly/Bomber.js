@@ -11,6 +11,7 @@ class Bomber {
         this.discovered = false;
         this.pos = model.rndSpawn();
         this.target = model.rndPos();
+        this.label = new Labels;
     }
 
     update() {
@@ -27,9 +28,12 @@ class Bomber {
         }
         else if (model.inRadar(this.pos))
             this.detectionTime -= 1;
+        if (model.inRadar(this.pos) && this.discovered)
+            this.label.update(this.pos, this.size/2);
     }
 
     drawRadar(ctx) {
+        this.label.draw(ctx, this.size);
         ctx.beginPath();
         ctx.arc(this.pos.x-this.size/2,this.pos.y-this.size/2,this.size,0,Math.PI*2,false);
         ctx.fillStyle = this.color;

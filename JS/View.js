@@ -61,6 +61,8 @@ class View {
                 obj.drawRadar(ctx);
             obj.drawCamera(ctx);
         }
+        let ui = new UI();
+        ui.draw(ctx);
     }
     
     onResize() {

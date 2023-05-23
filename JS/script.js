@@ -1,4 +1,5 @@
 //DroneTracking
+
 var model, view, control;
 
 let listClass = [
@@ -8,7 +9,9 @@ let listClass = [
     'Fly/Quadrocopter',
     'Fly/Bomber',
     'Fly/Rocket',
+    'Labels',
     'Auto',
+    'UI',
     'Model',
     'View',
     'Control'
