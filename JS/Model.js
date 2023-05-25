@@ -66,7 +66,7 @@ class Model {
     rndPos(pos) {
         let t = {
             x: pos.x + Math.round(Math.random() * 200-100),
-            y: pos.y + Math.round(Math.random() * 200-75)
+            y: pos.y + Math.round(Math.random() * 200-50)
         };
         return t;
     }

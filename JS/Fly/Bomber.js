@@ -10,14 +10,14 @@ class Bomber {
         this.detectionTime = 10 + Math.random()*10;
         this.discovered = false;
         this.pos = model.rndSpawn();
-        this.target = model.rndPos();
+        this.target = model.rndPos(this.pos);
         this.label = new Labels;
     }
 
     update() {
         this.pos = model.step(this.pos, this.target, this.speed)
         if (model.delta(this.pos, this.target) <= this.speed) {
-            this.target = model.rndPos();
+            this.target = model.rndPos(this.pos);
         }
         this.timerSignal += 1;
         if (this.timerSignal >= 30)

@@ -15,6 +15,7 @@ class Rocket {
             x: this.obj.pos.x,
             y: this.obj.pos.y
         };
+        this.timer = 0;
     }
 
     update() {
@@ -26,7 +27,9 @@ class Rocket {
         if (this.speed <= 20)
             this.speed += 0.5;
         if (model.delta(this.pos, this.target) <= this.speed/4) {
-            this.destroy();
+            //this.destroy();
+            this.timer += 5;
+            this.pos = this.target;
         }
     }
     
@@ -37,6 +40,12 @@ class Rocket {
         ctx.fill();
         ctx.strokeStyle = this.color;
         ctx.stroke();
+        if (this.timer != 0) {
+            ctx.beginPath();
+            ctx.arc(this.pos.x-this.size/2,this.pos.y-this.size/2,this.timer*2,0,Math.PI*2,false);
+            ctx.fillStyle = "rgba(256,"+this.timer*2+",0,"+(30-this.timer)/30+")";
+            ctx.fill();
+        }
     }
 
     drawCamera() {

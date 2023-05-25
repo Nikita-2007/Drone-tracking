@@ -12,7 +12,7 @@ class Labels {
     draw(ctx, size) {
         for (let obj of this.arrLab) {
             ctx.beginPath();
-            ctx.arc(obj.x,obj.y,size-1,0,Math.PI*2,false);
+            ctx.arc(obj.x,obj.y,1,0,Math.PI*2,false);
             ctx.fillStyle = 'darkred';
             ctx.fill();
             ctx.strokeStyle = 'darkred';
