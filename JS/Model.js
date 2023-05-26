@@ -40,7 +40,7 @@ class Model {
         let temp =  {
             x: Math.round(Math.random() * view.size.width),
             y: Math.round(Math.random() * view.size.height)
-        };;
+        };
         let pos;
         if (Math.random() >= 0.5)
             pos = {

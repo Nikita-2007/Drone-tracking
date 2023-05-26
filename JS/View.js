@@ -64,15 +64,6 @@ class View {
         let ui = new UI();
         ui.draw(ctx);
     }
-
-    boom(ctx, pos) {
-        ctx.beginPath();
-        ctx.arc(pos.x, pos.y, this.timerSignal*3,0,Math.PI*2,false);
-        ctx.strokeStyle = "rgba(200,200,200,"+(30-this.timerSignal)/30+")";
-        ctx.fillStyle = "rgba(200,200,200,"+(30-this.timerSignal)/30+")";
-        ctx.stroke();
-        ctx.fill();
-    }
     
     onResize() {
         this.canvas.width=this.size.width;

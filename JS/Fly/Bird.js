@@ -7,13 +7,13 @@ class Bird {
         this.speed = 3;
         this.size = 1;
         this.pos = model.rndSpawn();
-        this.target = model.rndPos();
+        this.target = model.rndPos(this.pos);
     }
 
     update() {
         this.pos = model.step(this.pos, this.target, this.speed)
         if (model.delta(this.pos, this.target) <= this.speed) {
-            this.target = model.rndPos();
+            this.target = model.rndPos(this.pos);
         }
     }
 
