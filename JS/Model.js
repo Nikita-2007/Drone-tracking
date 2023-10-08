@@ -5,7 +5,7 @@ class Model {
         this.init();
         this.listObject = [];
         this.auto = new Auto();
-        this.autoOn = false;
+        this.autoOn = true;
     }
 
     init() {

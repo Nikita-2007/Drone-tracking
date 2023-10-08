@@ -9,7 +9,7 @@ class Auto {
 
     update() {
         this.timer += 1 + Math.random()*0.5;
-        if (this.timer >= 50) {
+        if (this.timer >= 15) {
             this.randomObject();
             this.timer = 0;
         }

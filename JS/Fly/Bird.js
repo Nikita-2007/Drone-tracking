@@ -15,6 +15,9 @@ class Bird {
         if (model.delta(this.pos, this.target) <= this.speed) {
             this.target = model.rndPos(this.pos);
         }
+        if (!model.inRadar(this.pos)) {
+            model.listObject.splice(model.listObject.indexOf(this.obj), 1);
+        }
     }
 
     drawRadar(ctx) {

@@ -26,7 +26,7 @@ class Scout {
             this.discovered = true;
             model.newRocket(this)
         }
-        else if (model.inRadar(this.pos))
+        if (model.inRadar(this.pos))
             this.detectionTime -= 1;
         if (model.inRadar(this.pos) && this.discovered)
             this.label.update(this.pos, this.size/2);
@@ -46,7 +46,7 @@ class Scout {
         ctx.strokeStyle = "rgba(200,200,200,"+(30-this.timerSignal)/30+")";
         ctx.stroke();
 
-        if (this.discovered) {
+        if (this.discovered && this.detectionTime >= -10) {
             ctx.beginPath();
             ctx.rect(this.pos.x-15, this.pos.y-17, 30, 34);
             ctx.strokeStyle = "red";
