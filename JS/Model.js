@@ -6,6 +6,7 @@ class Model {
         this.listObject = [];
         this.auto = new Auto();
         this.autoOn = true;
+        this.imageDroneArr = ['Images/drone1.png', 'Images/drone2.png', 'Images/drone3.png', 'Images/drone4.jpg', 'Images/drone5.png']
     }
 
     init() {
@@ -36,7 +37,7 @@ class Model {
         return t;
     }
 
-    rndSpawn() {
+    rndSpawn(n) {
         let temp =  {
             x: Math.round(Math.random() * view.size.width),
             y: Math.round(Math.random() * view.size.height)
@@ -59,6 +60,7 @@ class Model {
                     y: temp.y/2
                 };
         }
+        view.image.src = this.imageDroneArr[n];
         return pos;
     }
 

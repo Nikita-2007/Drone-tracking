@@ -9,7 +9,7 @@ class Scout {
         this.timerSignal = 0;
         this.detectionTime = 30 + Math.random()*10;
         this.discovered = false;
-        this.pos = model.rndSpawn();
+        this.pos = model.rndSpawn(1);
         this.target = model.rndPos(this.pos);
         this.label = new Labels;
     }

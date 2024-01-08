@@ -9,7 +9,7 @@ class Quadrocopter {
         this.timerSignal = 0;
         this.detectionTime = 20 + Math.random()*10;
         this.discovered = false;
-        this.pos = model.rndSpawn();
+        this.pos = model.rndSpawn(0);
         this.target = model.rndPos(this.pos);
         this.label = new Labels;
     }

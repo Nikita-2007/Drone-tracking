@@ -6,7 +6,7 @@ class Bird {
         this.color = "gray";
         this.speed = 3;
         this.size = 1;
-        this.pos = model.rndSpawn();
+        this.pos = model.rndSpawn(4);
         this.target = model.rndPos(this.pos);
     }
 

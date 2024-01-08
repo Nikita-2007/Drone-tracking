@@ -9,7 +9,7 @@ class Attacking {
         this.timerSignal = 0;
         this.detectionTime = 15 + Math.random()*10;
         this.discovered = false;
-        this.pos = model.rndSpawn();
+        this.pos = model.rndSpawn(3);
         this.target = model.rndPos(this.pos);
         this.label = new Labels;
     }

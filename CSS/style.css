@@ -5,7 +5,10 @@ html, body {
     overflow: hidden;
     line-height: 0;
 }
-
+img {
+    max-width: 100%;
+    height: auto;
+}
 .row {
     display: inline-block;
     width: 100%;
@@ -27,7 +30,6 @@ html, body {
     float: left;
     width: 40%;
     height: 91vh;
-    display: flex;
 }
 #photo {
 	position: relative;
