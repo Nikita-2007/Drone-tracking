@@ -27,9 +27,14 @@ html, body {
     float: left;
     width: 40%;
     height: 91vh;
+    display: flex;
 }
 #photo {
-    height: 55vh;
+	position: relative;
+    height: auto;
+    width: auto;
+    
+    overflow: hidden;
 }
 #table {
     height: 36vh;

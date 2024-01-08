@@ -2,7 +2,7 @@
 
 class UI {
     constructor() {
-
+		
     }
 
     update() {
@@ -11,7 +11,7 @@ class UI {
 
     draw(ctx) {
         ctx.fillStyle='White';
-        ctx.font = "12pt Arial";
+        ctx.font = "5pt Arial";
         ctx.fillText("Количество целей", 100, 850);
     }
 }
