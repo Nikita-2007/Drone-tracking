@@ -29,8 +29,9 @@ class Model {
     }
 
     inRadar(pos) {
+		let k = view.k;
         let t = false;
-            if (pos.y <= 1.17 * pos.x + 185 && pos.y <= -1.15*pos.x+1486.52)
+            if (pos.y <= (1.17 * pos.x + 185)*k && pos.y <= (-1.15*pos.x+1486.52)*k)
                 t = true;
             else
                 t = false;

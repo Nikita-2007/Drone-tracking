@@ -12,16 +12,16 @@ class View {
         this.onResize();
         window.addEventListener('resize', this.onResize);
 
-        //Временно
-
         this.url = 'Images/drone1.png';
         this.image = new Image();
         this.image.src = this.url;
         document.getElementById('photo').appendChild(this.image);
+        this.k = this.size.width/1152
     }
     
     draw() {
         let ctx = this.ctx;
+        let k = this.k;
         //Радар
         ctx.beginPath();
         ctx.fillStyle = 'black';
@@ -32,27 +32,27 @@ class View {
 
         //Сетка
         for (var i = 0; i < 8; i += 1) {
-            ctx.moveTo(i*160, 0);
-            ctx.lineTo(552+i*2, 825);
+            ctx.moveTo(i*160*k, 0);
+            ctx.lineTo((552+i*2)*k, 825*k);
         }
         for (var i = 0; i < 14; i += 1) {
-            ctx.moveTo(i*51-155, i*60);
-            ctx.quadraticCurveTo(565, i*60-(340-i*20), 1130-i*52+155, i*60);
+            ctx.moveTo((i*51-155)*k, i*60*k);
+            ctx.quadraticCurveTo(565*k, (i*60-(340-i*20))*k, (1130-i*52+155)*k, i*60*k);
         }
         ctx.stroke();
 
         //Рамка радара
         ctx.beginPath();
-        ctx.lineWidth = 2;
+        ctx.lineWidth = 2*k;
         ctx.strokeStyle = "red";
-        ctx.moveTo(0, 185);
-        ctx.lineTo(550, 830);
-        ctx.moveTo(1130, 185);
-        ctx.lineTo(570, 830);
-        ctx.moveTo(550, 830);
-        ctx.quadraticCurveTo(560, 820, 570, 830);
-        ctx.moveTo(0, 185);
-        ctx.quadraticCurveTo(565, -100, 1130, 185);
+        ctx.moveTo(0, 185*k);
+        ctx.lineTo(550*k, 830*k);
+        ctx.moveTo(1130*k, 185*k);
+        ctx.lineTo(570*k, 830*k);
+        ctx.moveTo(550*k, 830*k);
+        ctx.quadraticCurveTo(560*k, 820*k, 570*k, 830*k);
+        ctx.moveTo(0, 185*k);
+        ctx.quadraticCurveTo(565*k, -100*k, 1130*k, 185*k);
         ctx.stroke();
 
         //Отрисовка дронов
